@@ -11,11 +11,12 @@ $(document).ready(function () {
         let nombre = check(data.name, "personal");
         let conexion = check(data.connections["group-affiliation"],"personal");
         let fecha = check(data.biography.publisher, "personal");
-        let ocupacion = check(data.work.occupation);
+        let ocupacion = check(data.work.occupation, "personal");
         let aparicion = check(data.biography["first-appearance"],"personal");
         let altura = check(data.appearance.height[0], "personal");
         let peso = check(data.appearance.weight[0], "personal");
         let alias = check(data.biography.aliases[0], "personal");
+        
         $("#heroInfo").html(`
                     <div class="row">
                         <div class="col-md-4 my-auto text-center">
